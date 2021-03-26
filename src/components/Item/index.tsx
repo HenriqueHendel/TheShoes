@@ -25,7 +25,7 @@ export default function Item({name, price, image, onClick}:ItemProps) {
                 source={image}
                 style={styles.itemImage}
             />
-            <Text style={styles.itemText} >{name}</Text>
+            <Text style={styles.itemText} >{handleTextLength(name)}</Text>
             <Text style={styles.itemPrice}>{`R$${price}`}</Text>
         </TouchableOpacity>
     )

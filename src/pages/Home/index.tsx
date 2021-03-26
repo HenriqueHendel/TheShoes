@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, FlatList, Image, Dimensions, TouchableOpacity } from 'react-native';
 import {MaterialIcons} from '@expo/vector-icons';
 
-import Item, {ItemProps} from '../../components/Itens';
+import Item, {ItemProps} from '../../components/Item';
 
 import {useNavigation} from '@react-navigation/native'
 
