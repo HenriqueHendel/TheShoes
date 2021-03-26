@@ -1,9 +1,11 @@
 import React from 'react';
 import { View, Text, Image, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
-import {NavigationProp} from '@react-navigation/native'
+
 import Dot from '../../components/Dot';
 import SizeButton from '../../components/SizeButton';
+import Button from '../../components/Button';
 
+import {NavigationProp} from '@react-navigation/native'
 interface DetailProps {
   navigation: NavigationProp<any, any>
 }
@@ -11,7 +13,7 @@ interface DetailProps {
 const Detail: React.FC<DetailProps> = ({navigation}) => {
 
   navigation.setOptions({
-    headerTitle: 'Vídeo Youtube'
+    headerTitle: 'Nike Downshifter 10'
   })
 
   return (
@@ -28,7 +30,7 @@ const Detail: React.FC<DetailProps> = ({navigation}) => {
             </View>
 
             <View>
-              <Text style={[styles.title, {fontSize: 24, opacity: 0.4}]} >Nike Downshifter 10</Text>
+              <Text style={[styles.title, {fontSize: 24, opacity: 0.4}]}>Nike Downshifter 10</Text>
             </View>
 
             <View style={styles.dotContainer} >
@@ -47,26 +49,69 @@ const Detail: React.FC<DetailProps> = ({navigation}) => {
               <SizeButton size={34} />
             </ScrollView>
           </View>
+
+
+          <View style={styles.textContainer} >
+            <Text style={styles.itemName} >
+              Nike Downshifter 10
+            </Text>
+            <Text style={styles.itemDescription} >
+              O Nike Downshifter 10 traz suporte e amortecimento atualizados. Seu design leve e acolchoado ajuda a manter você se movimentando enquanto corre.
+            </Text>
+            <Text style={styles.itemExtra}>
+              - Categoria: Amortecimento
+            </Text>
+            <Text style={styles.itemExtra} >
+              - Material: Mesh
+            </Text>
+          </View>
+
+          <Button />
+
+          <View style={styles.line} />
+          
       </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  container:{
+  container: {
     flex: 1,
     width: '100%',
     backgroundColor: '#FFF'
   },
-  image:{
+  image: {
     width: '100%'
   },
   title: {
     fontFamily: 'Anton_400Regular',
     paddingHorizontal: '2%'
   },
-  dotContainer:{
+  dotContainer: {
     flexDirection: 'row',
     marginVertical: '7%'
+  },
+  textContainer: {
+    marginVertical: '2%',
+    marginHorizontal:'2%'
+  },
+  itemName: {
+    fontSize: 22,
+    marginVertical: '2%'
+  },
+  itemDescription: {
+    fontSize: 16,
+    lineHeight: 25,
+    marginBottom: '2%'
+  },
+  itemExtra: {
+    fontSize: 16,
+    lineHeight: 25
+  },
+  line: {
+    borderWidth: 1,
+    borderBottomColor: '#ddd',
+    marginVertical: '2%'
   }
 })
 
