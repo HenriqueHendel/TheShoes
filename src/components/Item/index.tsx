@@ -6,7 +6,7 @@ export interface ItemProps {
     price: string
     image: ImageSourcePropType
 
-    onClick: () => void
+    onClick?: () => void
 }
 
 export default function Item({name, price, image, onClick}:ItemProps) {

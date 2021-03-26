@@ -4,17 +4,9 @@ import { View, Text, Image, ScrollView, TouchableOpacity, StyleSheet } from 'rea
 import Dot from '../../components/Dot';
 import SizeButton from '../../components/SizeButton';
 import Button from '../../components/Button';
+import Footer from '../../components/Footer';
 
-import {NavigationProp} from '@react-navigation/native'
-interface DetailProps {
-  navigation: NavigationProp<any, any>
-}
-
-const Detail: React.FC<DetailProps> = ({navigation}) => {
-
-  navigation.setOptions({
-    headerTitle: 'Nike Downshifter 10'
-  })
+const Detail: React.FC = () => {
 
   return (
       <ScrollView style={styles.container} >
@@ -69,6 +61,8 @@ const Detail: React.FC<DetailProps> = ({navigation}) => {
           <Button />
 
           <View style={styles.line} />
+
+          <Footer />
           
       </ScrollView>
   );

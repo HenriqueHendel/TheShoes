@@ -15,12 +15,10 @@ const Home: React.FC = () => {
 
   const _renderItem = ({index}) => {
     if(index % 2 == 0){
-      let imageOne = `../../assets/${itemList[index].img}`
-      let imageTwo = `../../assets/${itemList[index+1].img}`
       return (
         <View style={{flexDirection: 'row', justifyContent: 'space-around'}} >
-          <Item name={itemList[index].name} price={itemList[index].price} image={require('../../assets/01.png')} onClick={()=> navigate('Detail') } />
-          <Item name={itemList[index+1].name} price={itemList[index+1].price} image={require('../../assets/04.png')} onClick={()=> navigate('Detail') } />
+          <Item name={itemList[index].name} price={itemList[index].price} image={require('../../assets/02.png')} onClick={()=> navigate('Detail', {itemName: itemList[index].name}) } />
+          <Item name={itemList[index+1].name} price={itemList[index+1].price} image={require('../../assets/04.png')} onClick={()=> navigate('Detail', {itemName: itemList[index + 1].name}) } />
         </View> 
       )
     }else {
